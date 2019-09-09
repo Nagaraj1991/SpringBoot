@@ -26,8 +26,8 @@ public class EmployeeDataAccessService implements EmployeeDAL {
 	@Override
 	public int updateEmployee(UUID id, EmployeeDO _employee) {
 		return getEmployeeByID(id)
-				.map(p->{
-					int indexEmp=DB.indexOf(_employee);
+				.map(emp->{
+					int indexEmp=DB.indexOf(emp);
 					if(indexEmp>=0){
 						DB.set(indexEmp, new EmployeeDO(id, _employee.getempName()));
 						return 1;

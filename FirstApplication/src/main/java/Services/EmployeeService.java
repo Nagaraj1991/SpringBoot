@@ -17,7 +17,7 @@ public class EmployeeService {
 	private final EmployeeDAL _employeeDAL;
 	
 	@Autowired
-	public EmployeeService(@Qualifier("Manager") EmployeeDAL _employeeDAL)
+	public EmployeeService(@Qualifier("ManagerSQL") EmployeeDAL _employeeDAL)
 	{
 		this._employeeDAL=_employeeDAL;
 	}
